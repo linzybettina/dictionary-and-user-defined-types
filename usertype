@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+namespace collections_dictionary
+{
+    public class customer
+    {
+        public int Custid { get; set; }
+        public string Name { get; set; }
+        public string City { get; set; }
+        public double balance { get; set; }
+    }
+
+    class TestCustomer
+    {
+        static void Main()
+        {
+            List<customer> customers = new List<customer>();
+            customer c1 = new customer { Custid = 111, Name = "scott", City = "frankfurt", balance = 10000 };
+            customer c2 = new customer { Custid = 112, Name = "sajan", City = "berlin", balance = 20000 };
+            customer c3 = new customer { Custid = 113, Name = "frank", City = "chennai", balance = 30000 };
+            customer c4 = new customer { Custid = 114, Name = "gilda", City = "calcutta", balance = 40000 };
+            customer c5 = new customer { Custid = 115, Name = "ravi", City = "cochin", balance = 50000 };
+            customers.Add(c1);
+            customers.Add(c2);
+            customers.Add(c3);
+            customers.Add(c4);
+            customers.Add(c5);
+            foreach (customer obj in customers)
+                Console.WriteLine(obj.Custid + " " + obj.Name + " " + obj.City  + " " + obj.balance);
+            Console.ReadLine();
+        }
+    }
+
+    }
